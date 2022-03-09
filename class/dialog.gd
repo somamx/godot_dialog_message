@@ -1,6 +1,7 @@
 extends Resource
 class_name gameDialog
 
+signal updateDialog
 
 var title:String = ""
 var actor:Image= null
@@ -20,6 +21,7 @@ func init(data,idStart,idExit):
 	_dialogs = data
 	getProfile()
 	getDialog(str(idStart))
+	emit_signal("updateDialog")
 	
 func getProfile():
 	if _dialogs.has("profile"):
@@ -46,12 +48,15 @@ func getDialog(id:String):
 
 func Next():
 	getDialog(str(next))
-
+	emit_signal("updateDialog")
+	
 func Back():
 	getDialog(str(back))
+	emit_signal("updateDialog")
 
 func Exit():
 	getDialog(str(exit))
+	emit_signal("updateDialog")
 
 func hasDialog(name,default=""):
 	if _dialog.has(name):

@@ -15,10 +15,12 @@ func _ready():
 	_dialogStructure = load("res://class/dialog.tres")
 	loadDialog()
 	
+	_dialogStructure.connect("updateDialog",self,"updateDialog")
+	
 func loadDialog():
 	var file = File.new()
 	var pathFileName = "res://data/" + str(fileName) + ".json"
-	var foundFile = file.file_exists(pathFileName)
+	#var foundFile = file.file_exists(pathFileName)
 	if file.file_exists(pathFileName) :
 		file.open(pathFileName, file.READ)
 		var content = file.get_as_text()

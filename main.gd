@@ -5,7 +5,7 @@ onready var dialog = $dialog
 
 
 func _ready():
-	dialog.updateDialog()
+	#dialog.updateDialog()
 	
 	pass # Replace with function body.
 	
@@ -20,15 +20,15 @@ func _on_Button_pressed():
 	#print(dialog.rows.title)
 	#print(dialog.rows.message)
 	dialog.loadDialog()
-	dialog.updateDialog()
+	#dialog.updateDialog()
 
 
 func _on_Button2_pressed():
 	dialog.rows.Next()
-	dialog.updateDialog()
+	#dialog.updateDialog()
 
 
 func _on_Button3_pressed():
 	dialog.rows.Back()
-	dialog.updateDialog()
+	#dialog.updateDialog()
 
