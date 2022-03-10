@@ -24,11 +24,11 @@ func _on_Button_pressed():
 
 
 func _on_Button2_pressed():
-	dialog.rows.Next()
+	dialog.Next()
 	#dialog.updateDialog()
 
 
 func _on_Button3_pressed():
-	dialog.rows.Back()
+	dialog.Back()
 	#dialog.updateDialog()
 

@@ -1,6 +1,6 @@
 {
 	"profile" : {
-		"title" : "ทดสอบ",
+		"title" : "ทดสอบจ้า",
 		"actor" : "image/xxx/xxx",
 	},
 	"0" : {
@@ -15,22 +15,41 @@
 	"2" : {
 		"message" : "อะไรเอ่ย ?",
 		"choice" : {
-			"0" : {
-				"label" : "อ่านใหม่"
+			"a" : {
+				"label" : "อ่านใหม่ ดีจ้า ทดสอบ"
 			},
-			"3" : {
-				"label" : "อ่านต่อ"
+			"correct" : {
+				"label" : "อ่านต่อ แล้วงัย xxxxxxxxxxxxxxxxxxxxxxx"
 			},
-			"99" : {
+			"b" : {
 				"label" : "ออก"
 			}
 		},
-		"back" : "0",
+		"next" : "3",
 		
 	},
-	"3" : {
+	"incorrect" : {
+			"message" : "ผิด",
+			"next" : "self"
+	},
+	"correct" : {
 		"message" : "ถูกต้อง", 
-		"next" : "99"
+		"next" : "self",
+		"func" :"correct"
+	},
+	"3" : {
+		"message" : "1+1?", 
+		"choice" : {
+			"" : {
+				"label" : "1"
+			},
+			"correct" : {
+				"label" : "2"
+			},
+			"" : {
+				"label" : "3"
+			}
+		}
 	},
 	"99" : {
 		"message" : "Bye."
