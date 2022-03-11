@@ -20,6 +20,7 @@ func _on_Button_pressed():
 	#print(dialog.rows.title)
 	#print(dialog.rows.message)
 	dialog.loadDialog()
+	
 	#dialog.updateDialog()
 
 
